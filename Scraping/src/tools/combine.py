@@ -43,8 +43,8 @@ def combine_xlsx(files, outfile = None):
 	sheet = workbook.active
 
 	# Write headers
-	for i in range(1, len(headers)):
-		sheet.cell(column=i, row=1, value=headers[i - 1])
+        for i in range(1, len(headers) + 1):
+                sheet.cell(column=i, row=1, value=headers[i - 1])
 
 	# Write data sheet
 	for item in range(len(items)):
